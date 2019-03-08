@@ -1,0 +1,41 @@
+[Version]
+Signature=$CHICAGO$
+
+
+[DefaultInstall]
+AddReg=Group39, Disable_win8_3FVHScrolling_AddReg, UltraNav_Disable_win8_4FVHScrolling_AddReg, AdjustStickMethodAndSpeedFactor_AddReg, DisableIntPDFeature_DefaultOff_AddReg, PseudoSuspend_HotKey_V1, DisableKBCQueryCommand_AddReg, Set_3P2BCP_Feature_AddReg
+
+[PseudoSuspend_HotKey_V1]
+HKLM,System\CurrentControlSet\Services\SynTP\Parameters,KBCNotifyConfig,0x00010001,0x00000003
+HKLM,System\CurrentControlSet\Services\SynTP\Parameters,PseudoSuspendConfig,0x00010001,1
+HKLM,System\CurrentControlSet\Services\SynTP\Parameters,PseudoSuspendEnableKey,0x00010001,0xE059
+HKLM,System\CurrentControlSet\Services\SynTP\Parameters,PseudoSuspendDisableKey,0x00010001,0xE058
+
+[UltraNav_Disable_win8_4FVHScrolling_AddReg]
+HKLM,Software\Synaptics\SynTPEnh\ZoneConfig\Win8\4FHorizontal Scrolling,SystemZoneFlags,0x00010001,0x00850000
+HKLM,Software\Synaptics\SynTPEnh\ZoneConfig\Win8\4FHorizontal Scrolling,UserZoneFlags,0x00010001,0x00000000
+HKLM,Software\Synaptics\SynTPEnh\ZoneConfig\Win8\4FVertical Scrolling,SystemZoneFlags,0x00010001,0x00850002
+HKLM,Software\Synaptics\SynTPEnh\ZoneConfig\Win8\4FVertical Scrolling,UserZoneFlags,0x00010001,0x00000000
+
+[Disable_win8_3FVHScrolling_AddReg]
+HKLM,SOFTWARE\Synaptics\SynTPEnh\ZoneConfig\Win8\Plugin Zone,SystemZoneFlags,0x00010001,0x00000000
+HKLM,SOFTWARE\Synaptics\SynTPEnh\ZoneConfig\Win8\Plugin Zone,UserZoneFlags,0x00010001,0x00000001
+
+[DisableIntPDFeature_DefaultOff_AddReg]
+HKLM,SOFTWARE\Synaptics\SynTPEnh,DisableIntPDFeature,0x00010001,0x00000022
+
+[Group39]
+HKLM,Software\Synaptics\SynTP\Install,OEM,0x00000000,"Lenovo_Ultranav Group39"
+
+[Set_3P2BCP_Feature_AddReg]
+HKLM,System\CurrentControlSet\Services\SynTP\Parameters,ExtraCapabilities7Add,0x00010001,0x00010000
+HKLM,System\CurrentControlSet\Services\SynTP\Parameters,ExtraCapabilities7Mask,0x00010001,0xFFFFFFFF
+
+[DisableKBCQueryCommand_AddReg]
+HKLM,System\CurrentControlSet\Services\SynTP\Parameters,KBCNotifyConfig,0x00010001,0x00000001
+HKLM,System\CurrentControlSet\Services\SynTP\Parameters,PseudoSuspendConfig,0x00010001,0
+
+
+[AdjustStickMethodAndSpeedFactor_AddReg]
+HKLM,Software\Synaptics\SynTPEnh,ScrollMethod,0x00010001,0x00000005
+HKLM,Software\Synaptics\SynTPEnh,SynapticsScrollMethodSpeedFactor,0x00010001,0x00005000
